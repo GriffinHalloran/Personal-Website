@@ -1,0 +1,282 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* all similar content styling codes */
+body {
+    margin: 0;
+    background: #fff;
+    overflow: scroll;
+    background-size: cover;
+  }
+
+header {
+    background: #8B0000;
+  }
+  
+  header::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  nav {
+    float: left;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  
+  nav a {
+   color: #fff;
+   font-family: 'Ubuntu', sans-serif;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: 550;
+  }
+  
+nav a:hover{
+    color: #000
+  }
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about {
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title2{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title3{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 260px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #C92519;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+section .title2::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 260px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title2::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #C92519;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+section .title3::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 260px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title3::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #C92519;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* about section styling */
+.about .title::after {
+    content: "Artificial Intelligence";
+    color: rgb(0, 189, 63);
+}
+/* about section styling */
+.about .title2::after {
+    content: "Machine Learning";
+    color: rgb(255, 77, 7);
+}
+/* about section styling */
+.about .title3::after {
+    content: "Robotics";
+    color: rgb(0, 189, 63);
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: black;
+}
+
+.about .about-content .center img{
+    height: 400px;
+    width: 1200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: black;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: #C92519;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #C92519;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #C92519;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: #C92519;
+    background: none;
+}
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+
+
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .about .about-content .right .text,
+     .left .text{
+        font-size: 19px;
+    }
+}
+
+
