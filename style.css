@@ -322,8 +322,8 @@ section .title::after{
 .skills-content .right .ai::before{
     width: 80%;
 }
-.skills-content .right .ml::before{
-    width: 50%;
+.skills-content .right .cs::before{
+    width: 75%;
 }
 
 .owl-dots{
