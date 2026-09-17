@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="css/blog.css">
+      <link rel="stylesheet" href="../css/blog.css">
       <title>Responsive Blog Website | Home</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
    </head>
@@ -14,11 +14,11 @@
         <div class = container>
         <nav>
           <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="experience.html">Experience</a></li>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../experience.html">Experience</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
         </nav>
@@ -29,37 +29,37 @@
             <h1 class="title2">Neural Style Transfer</h1>
             <div class="about-content">
                 <div class="column left">
-                    <img src="images/content.jpg" alt="">
+                    <img src="../images/content.jpg" alt="">
                 </div>
                 <div class="column right">
                     <p>In my senior year of college finish a project based on the work of Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge (https://arxiv.org/abs/1508.06576. If you’re reading this article, I highly suggest taking a look at this white paper). The premise of the experiment was to make an image with the content of one image in the style of a second image. Here is an example: On the left you can see three images. The first is the content image, the second is the stly image, and the third is the final, merged image.
                 </div>
                 <div class="column left">
-                    <img src="images/night.jpg" alt="">
+                    <img src="../images/night.jpg" alt="">
                 </div>
                 <div class="column right">
                     <p>I was blown away looking at these results, and once I saw their pictures I knew I had to try and recreate the code myself. Now artistic style transfer can be considered a problem based off of two smaller sub-problems: content preservation and texture transfer. Ideally, a style transfer algorithm should be able to extract the objects from a target image and inform onto it the semantic content of another target image. To do this, we use this simple equation:</p>
-                    <img src="images/Ltotal.png" alt="">
+                    <img src="../images/Ltotal.png" alt="">
                     <p>Where Lcontent is the difference the image is content wise and Lstyle is the difference in style. Alpha and beta are just values that altar how important we want the two to be. And in theory, if we minimize this function, we have a perfectly merged image that shares the most amount of content with the base image and the most amount of style with the transfer image. So now all we need is to figure out how to calculate Lcontent and Lstyle to make some sweet looking images.
                         We’ll start at the first problem, which is content extraction. In the article above, the authors introduce a simple but elegant algorithm called neural style transfer. The baseline method for neural style transfer is to extract the content of one image and style of another and combine them into a new image with feature of both using a convolutional neural network. Now convolutional neural networks are usually used for image recognition or object detection, but it actually is the perfect neural network for this problem. This is because the main building blocks of convolutional networks are the convolution layers, which is where a set of feature detectors are applied to an image to produce a feature map, which is essentially a filtered version of the image. A trained network for image recognition is built to extract the main features of an image in order to identify the content. And this is all we need! So if we take the image that is generated at certain convolutional layers, it should have the main features of the base image without the artistic stlye. </p>
                     <br>
                 </div>
                 <div class="column left">
-                    <img src="images/merge.jpg" alt="">
+                    <img src="../images/merge.jpg" alt="">
                 </div>
                 <div class="column right">
                     <p>  So given a generated image, we use this formula to calculate Lcontent:</p>
-                    <img src="images/Ltotal.png" alt="">
+                    <img src="../images/Ltotal.png" alt="">
                     <p>Where F is the feature map of our content image and P is the feature map of our generated image. What’s really cool about this is that by taking the derivative of our content function, we can use standard back-propagation to change our random picture until it generates the same response in any convolutional layer as our original image. 
                         Now unlike our content calculation, we can’t just calculate the mean squared error from a specific feature map to extract the style from an image. Instead, we look at the style layers and calculate the Gram-matrix for the tensor outputs by the style-layers. This might sound a bit complicated, but it’s actually not. We basically use the following formula to calculate how different two images are in style:</p>
-                    <img src="images/Gram.png" alt="">
+                    <img src="../images/Gram.png" alt="">
                     <p>And then use almost the same formula to calculate Lstyle:</p>
-                    <img src="images/Lstyle.png" alt="">
+                    <img src="../images/Lstyle.png" alt="">
                     <p>Now we have all the pieces to minimize our original formula. And that’s it! Now all we need to do is give or program a content image    and a style image, have it run until it minimizes the function, and we’ll have an image with the content representation of one photograph and the stylistic representation of another. If you want to see how I implemented this, my code is on my GitHub account. Down below are  few of the results I generated, and there is a folder in my account that has all of the pictures generated as well. </p>
                 </div>
                 <div class="column right">
-                    <img src="images/city-wave.jpg" alt="">
-                    <img src="images/neuralTransfer.jpg" alt="">
+                    <img src="../images/city-wave.jpg" alt="">
+                    <img src="../images/neuralTransfer.jpg" alt="">
                 </div>
             </div>
         </div>
