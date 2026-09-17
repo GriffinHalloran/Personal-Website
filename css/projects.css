@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: #222;
   overflow: scroll;
-  background:url("images/background.jpg");
+  background:url("../images/background.jpg");
   background-size: cover;
 }
 
