@@ -109,7 +109,7 @@ nav a:hover{
 
 /*card0*/
 .card-image.card0 {
-  background: url("images/pupper.jpg");
+  background: url("../images/pupper.jpg");
   background-size: cover;
 }
 
@@ -124,7 +124,7 @@ nav a:hover{
 
 /*card1*/
 .card-image.card1 {
-  background: url("images/omr.png");
+  background: url("../images/omr.png");
   background-size: cover;
 }
 .card-text.card2 .date {
@@ -133,7 +133,7 @@ nav a:hover{
 
 /*card2*/
 .card-image.card2 {
-  background: url("images/neuralTransfer.jpg");
+  background: url("../images/neuralTransfer.jpg");
   background-size: cover;
 }
 .card-text.card2 .date {
@@ -142,7 +142,7 @@ nav a:hover{
 
 /*card3*/
 .card-image.card3 {
-  background: url("images/mario.jpg");
+  background: url("../images/mario.jpg");
   background-size: cover;
 }
 .card-text.card3 .date {
