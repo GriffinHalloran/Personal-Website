@@ -124,7 +124,7 @@ nav a:hover{
 
 /*card1*/
 .card-image.card1 {
-  background: url("../images/projects/opticalMusicRecognition.png");
+  background: url("../images/projects/opticalMusicRecognition/omr.png");
   background-size: cover;
 }
 .card-text.card2 .date {
@@ -133,7 +133,7 @@ nav a:hover{
 
 /*card2*/
 .card-image.card2 {
-  background: url("../images/projects/neuralStypeTransfer/neuralTransfer.jpg");
+  background: url("../images/projects/neuralStyleTransfer/neuralTransfer.jpg");
   background-size: cover;
 }
 .card-text.card2 .date {
