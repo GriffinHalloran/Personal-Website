@@ -35,7 +35,7 @@
                     <p>In my senior year of college finish a project based on the work of Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge (https://arxiv.org/abs/1508.06576. If you’re reading this article, I highly suggest taking a look at this white paper). The premise of the experiment was to make an image with the content of one image in the style of a second image. Here is an example: On the left you can see three images. The first is the content image, the second is the stly image, and the third is the final, merged image.
                 </div>
                 <div class="column left">
-                    <img src="../images/night.jpg" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/night.jpg" alt="">
                 </div>
                 <div class="column right">
                     <p>I was blown away looking at these results, and once I saw their pictures I knew I had to try and recreate the code myself. Now artistic style transfer can be considered a problem based off of two smaller sub-problems: content preservation and texture transfer. Ideally, a style transfer algorithm should be able to extract the objects from a target image and inform onto it the semantic content of another target image. To do this, we use this simple equation:</p>
@@ -45,21 +45,21 @@
                     <br>
                 </div>
                 <div class="column left">
-                    <img src="../images/merge.jpg" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/merge.jpg" alt="">
                 </div>
                 <div class="column right">
                     <p>  So given a generated image, we use this formula to calculate Lcontent:</p>
-                    <img src="../images/Ltotal.png" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/Ltotal.png" alt="">
                     <p>Where F is the feature map of our content image and P is the feature map of our generated image. What’s really cool about this is that by taking the derivative of our content function, we can use standard back-propagation to change our random picture until it generates the same response in any convolutional layer as our original image. 
                         Now unlike our content calculation, we can’t just calculate the mean squared error from a specific feature map to extract the style from an image. Instead, we look at the style layers and calculate the Gram-matrix for the tensor outputs by the style-layers. This might sound a bit complicated, but it’s actually not. We basically use the following formula to calculate how different two images are in style:</p>
-                    <img src="../images/Gram.png" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/Gram.png" alt="">
                     <p>And then use almost the same formula to calculate Lstyle:</p>
-                    <img src="../images/Lstyle.png" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/Lstyle.png" alt="">
                     <p>Now we have all the pieces to minimize our original formula. And that’s it! Now all we need to do is give or program a content image    and a style image, have it run until it minimizes the function, and we’ll have an image with the content representation of one photograph and the stylistic representation of another. If you want to see how I implemented this, my code is on my GitHub account. Down below are  few of the results I generated, and there is a folder in my account that has all of the pictures generated as well. </p>
                 </div>
                 <div class="column right">
-                    <img src="../images/city-wave.jpg" alt="">
-                    <img src="../images/neuralTransfer.jpg" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/city-wave.jpg" alt="">
+                    <img src="../images/projects/neuralStyleTransfer/neuralTransfer.jpg" alt="">
                 </div>
             </div>
         </div>
