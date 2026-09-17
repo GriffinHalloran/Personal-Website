@@ -29,7 +29,7 @@
             <h2 class="title2">Optical Music Recognition</h2>
             <div class="about-content">
                 <div class="column center">
-                    <img src="../images/omr.png" alt="">
+                    <img src="../images/projects/opticalMusicRecognition/omr.png" alt="">
                     <p>I worked on this project in my last year of college, and the goal was to implement several basic image operations such as image resampling, convolution, and edge detection to detect musical symbols in the image i.e. create an Optical Music Recognition (OMR) program. I wanted the OMR system to be capable of detecting where the note heads, quarter rests and eighth rests were in the image.</p>
                     <br>
                     <p> When creating the convolution kernels, I implemented two different functions. One function created a MxM mean filter, while the other created separable kernels Hx, Hy of the given size. For the convolutions themselves, I implement two different types of convolution functions. One function used a 2 dimensional convolution filter and the other function used two separable filters Hx and Hy. The convolution operations are created to handle both odd and even length kernels. The 2-d convolution function is implemented to handle kernels that may have different lengths of rows and columns i.e. they need not be MxM filters and can be MxN filters.</p>
@@ -38,9 +38,9 @@
                     <p>Edge detection was a little simpler as I just used sobel operators to implement it. I also created a more sophisticated method for template matching, which is explained on my github page for this project</p>
                     <br>
                     <p> Lastly, I had to find a way for the program to detect staff lines. Initially I used a standard Hough transformation, but as seen below, this caused issues since it would find lines both vertically, and horizontally.</p>
-                    <img src="../images/hough.png" alt="">
+                    <img src="../images/projects/opticalMusicRecognition/hough.png" alt="">
                     <p>To fix this, I updated the method so that I could take into account the pixels in each row and give higher priority when more black pixels are located in it. Then, I made a threshold saying that chosen lines cannot be within 3 pixels of each other so that I avoid clumping. Then, I sorted the chosen lines so that I can classify them in dictionaries with the other 4 lines that they are around. The first image in this post is an example of our lines being detected using this hybrid method. This was the final step, and after all of these were put together, the OMR was compete. This was a really fun project to work on, and really had me pushing through a ton of machine learning concepts Below is an example of the OMR on sheet music.</p>
-                    <img src="../images/canny.png" alt="">
+                    <img src="../images/projects/opticalMusicRecognition/canny.png" alt="">
                 </div>
             </div>
         </div>
